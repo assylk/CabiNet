@@ -33,10 +33,10 @@ if (strlen($_SESSION['damsid']==0)) {
     Breakpoints();
     </script>
     <style>
-        h2{
-            font-size:4em;
-            text-align:center;
-        }
+    h2 {
+        font-size: 4em;
+        text-align: center;
+    }
     </style>
 
 
@@ -87,7 +87,7 @@ foreach($results as $row)
 
                             </div>
 
-                            
+
                         </div>
                     </div><!-- END column -->
                     <?php }}?>

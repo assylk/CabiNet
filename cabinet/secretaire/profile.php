@@ -28,7 +28,7 @@ $query->execute();
 <html lang="en">
 <head>
 
-    <title>DAMS - Doctor Profile</title>
+    <title>CabiNet - Doctor Profile</title>
 
     <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">

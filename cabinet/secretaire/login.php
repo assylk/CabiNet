@@ -33,7 +33,7 @@ echo "<script>alert('Invalid Details');</script>";
 <html lang="en">
 <head>
 
-    <title>DAMS - Login Page</title>
+    <title>CabiNet - Login Page</title>
 
 
     <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">

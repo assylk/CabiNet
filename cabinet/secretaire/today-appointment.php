@@ -55,7 +55,7 @@ if (strlen($_SESSION['damsid']==0)) {
 <html lang="en">
 <head>
 
-    <title>DAMS || Cancelled Appointment Detail</title>
+    <title>CabiNet || Cancelled Appointment Detail</title>
 
     <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">

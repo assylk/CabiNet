@@ -31,7 +31,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
    $cin=$_POST['cin'];
       $email=$_POST['email'];
 
-      $sql= "update tblappointment set Name=:name,MobileNumber=:cin,Email=:email where ID=:eid";
+      $sql= "update tblappointment set Name=:name,CIN=:cin,Email=:email where ID=:eid";
     $query=$dbh->prepare($sql);
 $query->bindParam(':name',$name,PDO::PARAM_STR);
 $query->bindParam(':cin',$cin,PDO::PARAM_STR);
@@ -53,7 +53,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 <html lang="en">
 <head>
 
-    <title>DAMS|| View Appointment Detail</title>
+    <title>CabiNet || View Appointment Detail</title>
 
     <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
@@ -161,6 +161,16 @@ if($row->Status=="Cancelled")
                                         </tr>
                                         <tr>
 
+                                            <th>CIN</th>
+
+
+                                            <td colspan="3"><?php  echo htmlentities($row->CIN);?></td>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr>
+
                                             <th>Remark</th>
                                             <?php if($row->Remark==""){ ?>
 
@@ -170,6 +180,7 @@ if($row->Status=="Cancelled")
                                             <?php } ?>
 
                                         </tr>
+
                                         <tr>
 
                                             <th>Ordannance</th>

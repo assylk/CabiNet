@@ -49,46 +49,49 @@ echo "<script>alert('Email-id already exist. Please try again');</script>";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	
-	<title>DAMS - Login Page</title>
-	
 
-	<link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" href="libs/bower/animate.css/animate.min.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/core.css">
-	<link rel="stylesheet" href="assets/css/misc-pages.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+    <title>CabiNet || Login Page</title>
+
+
+    <link rel="stylesheet" href="libs/bower/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="libs/bower/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/core.css">
+    <link rel="stylesheet" href="assets/css/misc-pages.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
 </head>
 <body class="simple-page">
-	<div id="back-to-home">
-		<a href="../index.php" class="btn btn-outline btn-default"><i class="fa fa-home animated zoomIn"></i></a>
-	</div>
-	<div class="simple-page-wrap">
-		<div class="simple-page-logo animated swing">
-			
-				<span style="color: white"><i class="fa fa-gg"></i></span>
-				<span style="color: white">DAMS</span>
-			
-		</div><!-- logo -->
-		<div class="simple-page-form animated flipInY" id="login-form">
-	<h4 class="form-title m-b-xl text-center">Sign Up With Your DAMS Account</h4>
-	<form action="" method="post">
-		<div class="form-group">
-			<input id="fname" type="text" class="form-control" placeholder="Full Name" name="fname" required="true">
-		</div>
+    <div id="back-to-home">
+        <a href="../index.php" class="btn btn-outline btn-default"><i class="fa fa-home animated zoomIn"></i></a>
+    </div>
+    <div class="simple-page-wrap">
+        <div class="simple-page-logo animated swing">
 
-		<div class="form-group">
-			<input id="email" type="email" class="form-control" placeholder="Email" name="email" required="true">
-		</div>
-		<div class="form-group">
-			<input id="mobno" type="text" class="form-control" placeholder="Mobile" name="mobno" maxlength="10" pattern="[0-9]+" required="true">
-		</div>
-		<div class="form-group">
-			<select class="form-control" name="specializationid">
-				<option value="">Choose Specialization</option>
-				<?php
+            <span style="color: white"><i class="fa fa-gg"></i></span>
+            <span style="color: white">DAMS</span>
+
+        </div><!-- logo -->
+        <div class="simple-page-form animated flipInY" id="login-form">
+            <h4 class="form-title m-b-xl text-center">Sign Up With Your DAMS Account</h4>
+            <form action="" method="post">
+                <div class="form-group">
+                    <input id="fname" type="text" class="form-control" placeholder="Full Name" name="fname"
+                        required="true">
+                </div>
+
+                <div class="form-group">
+                    <input id="email" type="email" class="form-control" placeholder="Email" name="email"
+                        required="true">
+                </div>
+                <div class="form-group">
+                    <input id="mobno" type="text" class="form-control" placeholder="Mobile" name="mobno" maxlength="10"
+                        pattern="[0-9]+" required="true">
+                </div>
+                <div class="form-group">
+                    <select class="form-control" name="specializationid">
+                        <option value="">Choose Specialization</option>
+                        <?php
 $sql1="SELECT * from tblspecialization";
 $query1 = $dbh -> prepare($sql1);
 $query1->execute();
@@ -99,27 +102,29 @@ if($query1->rowCount() > 0)
 {
 foreach($results1 as $row1)
 {               ?>
-				<option value="<?php  echo htmlentities($row1->ID);?>"><?php  echo htmlentities($row1->Specialization);?></option><?php $cnt=$cnt+1;}} ?> 
-			</select>
-			
-		</div>
+                        <option value="<?php  echo htmlentities($row1->ID);?>">
+                            <?php  echo htmlentities($row1->Specialization);?></option><?php $cnt=$cnt+1;}} ?>
+                    </select>
 
-		<div class="form-group">
-			<input id="password" type="password" class="form-control" placeholder="Password" name="password" required="true">
-		</div>
+                </div>
 
-		<input type="submit" class="btn btn-primary" value="Register" name="submit">
-	</form>
-</div><!-- #login-form -->
+                <div class="form-group">
+                    <input id="password" type="password" class="form-control" placeholder="Password" name="password"
+                        required="true">
+                </div>
 
-<div class="simple-page-footer">
-	<p>
-		<small>Do you have an account ?</small>
-		<a href="login.php">SIGN IN</a>
-	</p>
-</div>
+                <input type="submit" class="btn btn-primary" value="Register" name="submit">
+            </form>
+        </div><!-- #login-form -->
+
+        <div class="simple-page-footer">
+            <p>
+                <small>Do you have an account ?</small>
+                <a href="login.php">SIGN IN</a>
+            </p>
+        </div>
 
 
-	</div><!-- .simple-page-wrap -->
+    </div><!-- .simple-page-wrap -->
 </body>
 </html>
