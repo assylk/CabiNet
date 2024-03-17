@@ -53,8 +53,6 @@ echo "<script>alert('Invalid Details');</script>";
     <div class="simple-page-wrap">
         <div class="simple-page-logo animated swing">
 
-            <span style="color: white"><i class="fa fa-gg"></i></span>
-            <span style="color: white">CabiNet</span>
 
         </div><!-- logo -->
         <div class="simple-page-form animated flipInY" id="login-form">

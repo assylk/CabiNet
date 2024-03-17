@@ -22,7 +22,7 @@
 
         <a href="dashboard.php" class="navbar-brand">
             <span class="brand-icon"><i class="fa fa-gg"></i></span>
-            <span class="brand-name">DAMS</span>
+            <span class="brand-name">CabiNet</span>
         </a>
     </div><!-- .navbar-header -->
 

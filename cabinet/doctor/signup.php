@@ -68,12 +68,10 @@ echo "<script>alert('Email-id already exist. Please try again');</script>";
     <div class="simple-page-wrap">
         <div class="simple-page-logo animated swing">
 
-            <span style="color: white"><i class="fa fa-gg"></i></span>
-            <span style="color: white">DAMS</span>
 
         </div><!-- logo -->
         <div class="simple-page-form animated flipInY" id="login-form">
-            <h4 class="form-title m-b-xl text-center">Sign Up With Your DAMS Account</h4>
+            <h4 class="form-title m-b-xl text-center">Sign Up With Your CabiNet Account</h4>
             <form action="" method="post">
                 <div class="form-group">
                     <input id="fname" type="text" class="form-control" placeholder="Full Name" name="fname"

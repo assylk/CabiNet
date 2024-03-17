@@ -65,7 +65,7 @@ echo "<script>window.location.href ='index2.php'</script>";
     <meta name="description" content="" />
     <meta name="copyright" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
+    <link rel="stylesheet" href="style.css">
     <!-- Title -->
     <title>CabiNet || Home Page</title>
 
@@ -178,6 +178,15 @@ echo "<script>window.location.href ='index2.php'</script>";
                                 <i class="fa fa-envelope"></i><a
                                     href="mailto:support@yourmail.com">cabinet@gmail.com</a>
                             </li>
+                            <li>
+                                <label class="ui-switch">
+                                    <input type="checkbox">
+                                    <div class="slider">
+                                        <div class="circle"></div>
+                                    </div>
+                                </label>
+
+                            </li>
                         </ul>
                         <!-- End Top Contact -->
                     </div>
@@ -193,7 +202,16 @@ echo "<script>window.location.href ='index2.php'</script>";
                         <div class="col-lg-3 col-md-3 col-12">
                             <!-- Start Logo -->
                             <div class="logo">
-                                <a href="index.html"><img src="home/img/logo.png" alt="#" /></a>
+                                <div>
+                                    <img src="home/img/favicon.png" style="vertical-align: bottom;padding-top:0;"
+                                        width="40px" alt="">
+
+                                    <button class="buttonlogo" data-text="Awesome">
+                                        <span class="actual-text">&nbsp;CabiNet&nbsp;</span>
+                                        <span aria-hidden="true" class="hover-text">&nbsp;CabiNet&nbsp;</span>
+                                    </button>
+                                </div><!-- logo -->
+
                             </div>
                             <!-- End Logo -->
                             <!-- Mobile Nav -->
@@ -221,6 +239,7 @@ echo "<script>window.location.href ='index2.php'</script>";
                             <div class="get-quote">
                                 <a href="#appointmentSection" class="btn">Book Appointment</a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -367,7 +386,7 @@ echo "<script>window.location.href ='index2.php'</script>";
                                     <h4>Opening Hours</h4>
                                     <ul class="time-sidual">
                                         <li class="day">
-                                            Monday - Fridayp <span>8.00-20.00</span>
+                                            Monday - Friday <span>8.00-20.00</span>
                                         </li>
                                         <li class="day">Saturday <span>9.00-18.30</span></li>
                                         <li class="day">
@@ -392,7 +411,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Are Always Ready to Help You & Your Family</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -508,7 +534,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Offer Different Services To Improve Your Health</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -612,7 +645,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Maintain Cleanliness Rules Inside Our Hospital</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -671,7 +711,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Offer Different Services To Improve Your Health</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -764,7 +811,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Provide You The Best Treatment In Resonable Price</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -902,7 +956,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>Keep up with Our Most Recent Medical News.</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -1026,7 +1087,14 @@ echo "<script>window.location.href ='index2.php'</script>";
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>We Are Always Ready to Help You. Book An Appointment</h2>
-                        <img src="home/img/section-img.png" alt="#" />
+                        <div class="loading">
+                            <svg width="64px" height="48px">
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="back">
+                                </polyline>
+                                <polyline points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24" id="front">
+                                </polyline>
+                            </svg>
+                        </div>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipiscing elit praesent
                             aliquet. pretiumts
@@ -1281,22 +1349,7 @@ while($row =$stmt->fetch()) {
             </div>
         </div>
         <!--/ End Footer Top -->
-        <!-- Copyright -->
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                        <div class="copyright-content">
-                            <p>
-                                © Copyright 2018 | All Rights Reserved by
-                                <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Copyright -->
+
     </footer>
     <!--/ End Footer Area -->
 

@@ -64,12 +64,7 @@ echo "<script>alert('Email-id already exist. Please try again');</script>";
         <a href="../index.php" class="btn btn-outline btn-default"><i class="fa fa-home animated zoomIn"></i></a>
     </div>
     <div class="simple-page-wrap">
-        <div class="simple-page-logo animated swing">
 
-            <span style="color: white"><i class="fa fa-gg"></i></span>
-            <span style="color: white">CabiNet</span>
-
-        </div><!-- logo -->
         <div class="simple-page-form animated flipInY" id="login-form">
             <h4 class="form-title m-b-xl text-center">Sign Up With Your CabiNet Account</h4>
             <form action="" method="post">
