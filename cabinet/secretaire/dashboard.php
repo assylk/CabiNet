@@ -39,11 +39,12 @@ $fname=$row->FullName;
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/core.css">
     <link rel="stylesheet" href="assets/css/app.css">
-
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.0/dist/css/uikit.min.css" />
     <!-- endbuild -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
     <script src="libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+    <script src="js/main.js"></script>
     <script>
     Breakpoints();
     </script>

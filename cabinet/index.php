@@ -120,6 +120,7 @@ echo "<script>window.location.href ='index.php'</script>";
         });
     }
     </script>
+
 </head>
 <body>
     <!-- Preloader -->
@@ -159,7 +160,7 @@ echo "<script>window.location.href ='index.php'</script>";
     <!-- Header Area -->
     <header class="header">
         <!-- Topbar -->
-        <div class="topbar">
+        <div class="topbar dd">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-5 col-12">
@@ -178,15 +179,7 @@ echo "<script>window.location.href ='index.php'</script>";
                                 <i class="fa fa-envelope"></i><a
                                     href="mailto:support@yourmail.com">cabinet@gmail.com</a>
                             </li>
-                            <li>
-                                <label class="ui-switch">
-                                    <input type="checkbox">
-                                    <div class="slider">
-                                        <div class="circle"></div>
-                                    </div>
-                                </label>
 
-                            </li>
                         </ul>
                         <!-- End Top Contact -->
                     </div>
@@ -405,7 +398,7 @@ echo "<script>window.location.href ='index.php'</script>";
     <!--/End Start schedule Area -->
 
     <!-- Start Feautes -->
-    <section class="Feautes section">
+    <section class="Feautes section" style="backgound-color:black">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">

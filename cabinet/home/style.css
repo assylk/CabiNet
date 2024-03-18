@@ -172,7 +172,7 @@ body {
   border-radius: 5px 0 0 5px;
   background: #1a76d1;
   text-align: center;
-  color: #fff !important;
+  color: #fff;
   top: 0;
   cursor: pointer;
   box-shadow: -4px 0px 5px #00000036;
@@ -1111,7 +1111,7 @@ body {
   border: 1px solid #fff;
   color: #fff;
   background: transparent;
-  color: #fff !important;
+  color: #fff;
 }
 .call-action .content .second:before {
   background: #fff;
@@ -3195,8 +3195,8 @@ body {
   border: 1px solid #eee;
 }
 .accordion a:hover {
-  color: #fff !important;
-  background: #1a76d1 !important;
+  color: #fff;
+  background: #1a76d1;
 }
 .accordion a:after {
   position: absolute;
@@ -3208,7 +3208,7 @@ body {
   font-weight: 700;
 }
 .accordion a:hover:after {
-  color: #fff !important;
+  color: #fff;
 }
 .accordion li {
   position: relative;
@@ -4107,21 +4107,21 @@ body {
 }
 .footer input::-webkit-input-placeholder {
   opacity: 1;
-  color: #fff !important;
+  color: #fff;
 }
 
 .footer input::-moz-placeholder {
   opacity: 1;
-  color: #fff !important;
+  color: #fff;
 }
 
 .footer input::-ms-input-placeholder {
   opacity: 1;
-  color: #fff !important;
+  color: #fff;
 }
 .footer input::input-placeholder {
   opacity: 1;
-  color: #fff !important;
+  color: #fff;
 }
 .footer .single-footer .newsletter-inner .button {
   position: absolute;

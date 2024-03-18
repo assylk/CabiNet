@@ -41,7 +41,12 @@
             </ul>
 
             <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
-
+                <li><label class="ui-switch">
+                        <input type="checkbox" onchange="toggleTheme()" id="slider">
+                        <div class="slider">
+                            <div class="circle"></div>
+                        </div>
+                    </label></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -86,7 +91,6 @@ foreach($results as $row)
                         <?php  } ?>
                     </div>
                 </li>
-
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button"
                         aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
