@@ -11,7 +11,7 @@
                 <div class="foldable">
                     <?php
 $eid=$_SESSION['damsid'];
-$sql="SELECT FullName,Email from  tblsecretaire where ID=:eid";
+$sql="SELECT FullName,Email from tbldoctor where ID=:eid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 $query->execute();

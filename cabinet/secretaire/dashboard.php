@@ -13,7 +13,7 @@ if (strlen($_SESSION['damsid']==0)) {
 
 <?php
 $eid=$_SESSION['damsid'];
-$sql="SELECT FullName,Email from tblsecretaire where ID=:eid";
+$sql="SELECT FullName,Email,Role from tbldoctor where ID=:eid";
 $query = $dbh -> prepare($sql);
 $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 $query->execute();
@@ -21,9 +21,11 @@ $results=$query->fetchAll(PDO::FETCH_OBJ);
 
 foreach($results as $row)
 {    
+$role=$row->Role=="doctor"?"Doctor":"Secretaire";
 $email=$row->Email;   
 $fname=$row->FullName;     
-}   ?>
+}   
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,7 +76,7 @@ $fname=$row->FullName;
                             <td colspan="1">
                                 <p
                                     style="font-size: 33px;padding-left:12px;padding-top:15px;font-weight: 600;margin-left:20px;">
-                                    Dashboard</p>
+                                    <?php  echo $role ;?> | Dashboard</p>
 
                             </td>
                             <td width="25%">
@@ -119,9 +121,8 @@ $fname=$row->FullName;
                                 <div class="widget-body clearfix">
                                     <?php 
 						 $docid=$_SESSION['damsid'];;
-$sql ="SELECT * from  tblappointment where Status is null && Doctor=:docid ";
+$sql ="SELECT * from  tblappointment where Status is null";
 $query = $dbh -> prepare($sql);
-$query-> bindParam(':docid', $docid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $totnewapt=$query->rowCount();
@@ -148,9 +149,8 @@ $totnewapt=$query->rowCount();
                                 <div class="widget-body clearfix">
                                     <?php 
 						 $docid=$_SESSION['damsid'];;
-$sql ="SELECT * from  tblappointment where Status='Approved' && Doctor=:docid ";
+$sql ="SELECT * from  tblappointment where Status='Approved'";
 $query = $dbh -> prepare($sql);
-$query-> bindParam(':docid', $docid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $totappapt=$query->rowCount();
@@ -178,9 +178,8 @@ $totappapt=$query->rowCount();
                                     <div class="pull-left">
                                         <?php 
 						 $docid=$_SESSION['damsid'];;
-$sql ="SELECT * from  tblappointment where Status='Cancelled' && Doctor=:docid ";
+$sql ="SELECT * from  tblappointment where Status='Cancelled'";
 $query = $dbh -> prepare($sql);
-$query-> bindParam(':docid', $docid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $totncanapt=$query->rowCount();
@@ -208,9 +207,8 @@ $totncanapt=$query->rowCount();
                                     <div class="pull-left">
                                         <?php 
 						 $docid=$_SESSION['damsid'];;
-$sql ="SELECT * from  tblappointment where Doctor=:docid ";
+$sql ="SELECT * from  tblappointment ";
 $query = $dbh -> prepare($sql);
-$query-> bindParam(':docid', $docid, PDO::PARAM_STR);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
 $totapt=$query->rowCount();

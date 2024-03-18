@@ -166,8 +166,8 @@ echo "<script>window.location.href ='index.php'</script>";
                     <div class="col-lg-6 col-md-5 col-12">
                         <!-- Contact -->
                         <ul class="top-link">
-                            <li><a href="doctor/login.php">Doctors</a></li>
-                            <li><a href="secretaire/login.php">Secretaire</a></li>
+                            <li><a href="login.php">Login</a></li>
+                            <li><a href="signup.php">Sign Up</a></li>
                         </ul>
                         <!-- End Contact -->
                     </div>
