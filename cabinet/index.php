@@ -35,7 +35,7 @@ $query->bindParam(':message',$message,PDO::PARAM_STR);
    $LastInsertId=$dbh->lastInsertId();
    if ($LastInsertId>0) {
     echo '<script>alert("Your Appointment Request Has Been Send. We Will Contact You Soon")</script>';
-echo "<script>window.location.href ='index2.php'</script>";
+echo "<script>window.location.href ='index.php'</script>";
   }
   else
     {
