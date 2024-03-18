@@ -22,12 +22,13 @@ foreach($results as $row)
 $email=$row->Email;   
 $fname=$row->FullName;     
 }   ?>
-                    <h5><a href="javascript:void(0)" class="username"><?php  echo $fname ;?></a></h5>
+                    <h5><a href="javascript:void(0)" class="username" style="font-size:15px"><?php echo $fname;?></a>
+                    </h5>
                     <ul>
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <small><?php  echo $email;?></small>
+                                <small style="margin-left:-30px"><?php echo $email;?></small>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu animated flipInY">

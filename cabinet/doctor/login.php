@@ -7,23 +7,30 @@ if(isset($_POST['login']))
   {
     $email=$_POST['email'];
     $password=md5($_POST['password']);
-    $sql ="SELECT ID,Email FROM tbldoctor WHERE Email=:email and Password=:password";
+    $sql ="SELECT ID,Email,Role FROM tbldoctor WHERE Email=:email and Password=:password";
     $query=$dbh->prepare($sql);
     $query->bindParam(':email',$email,PDO::PARAM_STR);
-$query-> bindParam(':password', $password, PDO::PARAM_STR);
+    $query-> bindParam(':password', $password, PDO::PARAM_STR);
     $query-> execute();
     $results=$query->fetchAll(PDO::FETCH_OBJ);
     if($query->rowCount() > 0)
 {
 foreach ($results as $result) {
 $_SESSION['damsid']=$result->ID;
+$test=$result->Role;
+
 $_SESSION['damsemailid']=$result->Email;
 $_SESSION['damsfullname']=$result->FullName;
 
 
 }
+if($test=="doctor"){
 $_SESSION['login']=$_POST['email'];
 echo "<script type='text/javascript'> document.location ='dashboard.php'; </script>";
+}
+echo "<script type='text/javascript'> document.location ='../secretaire/dashboard.php'; </script>";
+
+
 } else{
 echo "<script>alert('Invalid Details');</script>";
 }

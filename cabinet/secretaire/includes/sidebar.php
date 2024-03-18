@@ -27,7 +27,7 @@ $fname=$row->FullName;
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle usertitle" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                <small><?php  echo $email;?></small>
+                                <small style="margin-left:-30px"><?php  echo $email;?></small>
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu animated flipInY">

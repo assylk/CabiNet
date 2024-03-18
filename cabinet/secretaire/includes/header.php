@@ -41,12 +41,6 @@
             </ul>
 
             <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
-                <li><label class="ui-switch">
-                        <input type="checkbox" onchange="toggleTheme()" id="slider">
-                        <div class="slider">
-                            <div class="circle"></div>
-                        </div>
-                    </label></li>
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -78,7 +72,6 @@ foreach($results as $row)
                                 <div class="media-left">
                                     <div class="avatar avatar-xs avatar-circle">
                                         <img src="assets/images/images.png" alt="">
-                                        <i class="status status-online"></i>
                                     </div>
                                 </div>
                                 <div class="media-body">
