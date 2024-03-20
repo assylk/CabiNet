@@ -2,6 +2,28 @@
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
+date_default_timezone_set('Africa/Tunisia');
+
+$endTime = date("H:i:s"); // Get the current time, you can change this to your selected time
+$startTime = date("H:i:s", strtotime($endTime) - (20 * 60));
+
+
+
+$today = date('Y-m-d');
+$sql ="SELECT * from tblappointment where Status='Approved' and Ordannance is Null";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$totClientByDay=$query->rowCount();
+
+
+$sql ="SELECT * from tblappointment where Status='Approved' and Ordannance is Null and AppointmentDate='$today' and AppointmentDate='$today' and AppointmentTime BETWEEN '$startTime' AND '$endTime'";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$totClientByHour=$query->rowCount();
+
+
 
 if (strlen($_SESSION['damsid']==0)) {
   header('location:logout.php');
@@ -41,6 +63,12 @@ if (strlen($_SESSION['damsid']==0)) {
         font-size: 4em;
         text-align: center;
     }
+
+    td {
+        padding: 20px 0;
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
     </style>
 </head>
 <body class="menubar-left menubar-unfold menubar-light theme-primary">
@@ -58,6 +86,14 @@ if (strlen($_SESSION['damsid']==0)) {
     <main id="app-main" class="app-main">
         <h2>Salle d'Attente</h2>
         <div class="wrap">
+            <div style="background-color:#3a3d47;color:white;height:70px;width:100%;margin-bottom: 50px">
+                <table style="border-collapse: separate;border-spacing: 50px 0;">
+                    <tr>
+                        <td>Total Patient For this Day : <?php echo $totClientByDay;?></td>
+                        <td>Total Patient For this Hour : <?php echo $totClientByHour;?></td>
+                    </tr>
+                </table>
+            </div>
             <section class="app-content">
                 <div class="row">
                     <?php

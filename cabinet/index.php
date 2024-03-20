@@ -2,6 +2,32 @@
 session_start();
 //error_reporting(0);
 include('doctor/includes/dbconnection.php');
+
+
+$sql ="SELECT * from  tblspecialization";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$totSpecialization=$query->rowCount();
+
+
+
+$sql ="SELECT * from  tblappointment where Status='Approved' and Ordannance is not Null";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$totClient=$query->rowCount();
+
+
+
+
+$sql ="SELECT * from  tblappointment";
+$query = $dbh -> prepare($sql);
+$query->execute();
+$results=$query->fetchAll(PDO::FETCH_OBJ);
+$totPatient=$query->rowCount();
+
+
     if(isset($_POST['submit']))
   {
  $item_selected=$_POST['itemselected'];
@@ -139,23 +165,6 @@ echo "<script>window.location.href ='index.php'</script>";
     </div>
     <!-- End Preloader -->
 
-    <!-- Get Pro Button -->
-    <ul class="pro-features">
-        <a class="get-pro" href="#">Get Pro</a>
-        <li class="big-title">Pro Version Available on Themeforest</li>
-        <li class="title">Pro Version Features</li>
-        <li>2+ premade home pages</li>
-        <li>20+ html pages</li>
-        <li>Color Plate With 12+ Colors</li>
-        <li>Sticky Header / Sticky Filters</li>
-        <li>Working Contact Form With Google Map</li>
-        <div class="button">
-            <a href="http://preview.themeforest.net/item/mediplus-medical-and-doctor-html-template/full_screen_preview/26665910?_ga=2.145092285.888558928.1591971968-344530658.1588061879"
-                target="_blank" class="btn">Pro Version Demo</a>
-            <a href="https://themeforest.net/item/mediplus-medical-and-doctor-html-template/26665910" target="_blank"
-                class="btn">Buy Pro Version</a>
-        </div>
-    </ul>
 
     <!-- Header Area -->
     <header class="header">
@@ -176,8 +185,7 @@ echo "<script>window.location.href ='index.php'</script>";
                         <ul class="top-contact">
                             <li><i class="fa fa-phone"></i>+216 1234 5678</li>
                             <li>
-                                <i class="fa fa-envelope"></i><a
-                                    href="mailto:support@yourmail.com">cabinet@gmail.com</a>
+                                <i class="fa fa-envelope"></i><a href="mailto:cabinet@gmail.com">cabinet@gmail.com</a>
                             </li>
 
                         </ul>
@@ -261,7 +269,7 @@ echo "<script>window.location.href ='index.php'</script>";
                                     quam.
                                 </p>
                                 <div class="button">
-                                    <a href="#" class="btn">Get Appointment</a>
+                                    <a href="#appointmentSection" class="btn">Get Appointment</a>
                                     <a href="#" class="btn primary">Learn More</a>
                                 </div>
                             </div>
@@ -286,7 +294,7 @@ echo "<script>window.location.href ='index.php'</script>";
                                     quam.
                                 </p>
                                 <div class="button">
-                                    <a href="#" class="btn">Get Appointment</a>
+                                    <a href="#appointmentSection" class="btn">Get Appointment</a>
                                     <a href="#" class="btn primary">About Us</a>
                                 </div>
                             </div>
@@ -311,7 +319,7 @@ echo "<script>window.location.href ='index.php'</script>";
                                     quam.
                                 </p>
                                 <div class="button">
-                                    <a href="#" class="btn">Get Appointment</a>
+                                    <a href="#appointmentSection" class="btn">Get Appointment</a>
                                     <a href="#" class="btn primary">Conatct Now</a>
                                 </div>
                             </div>
@@ -474,10 +482,10 @@ echo "<script>window.location.href ='index.php'</script>";
                 <div class="col-lg-3 col-md-6 col-12">
                     <!-- Start Single Fun -->
                     <div class="single-fun">
-                        <i class="icofont icofont-home"></i>
+                        <i class="icofont icofont-users"></i>
                         <div class="content">
-                            <span class="counter">3468</span>
-                            <p>Hospital Rooms</p>
+                            <span class="counter"><?php echo $totPatient;?></span>
+                            <p>Total Patients</p>
                         </div>
                     </div>
                     <!-- End Single Fun -->
@@ -487,7 +495,7 @@ echo "<script>window.location.href ='index.php'</script>";
                     <div class="single-fun">
                         <i class="icofont icofont-user-alt-3"></i>
                         <div class="content">
-                            <span class="counter">557</span>
+                            <span class="counter"><?php echo $totSpecialization; ?></span>
                             <p>Specialist Doctors</p>
                         </div>
                     </div>
@@ -498,7 +506,7 @@ echo "<script>window.location.href ='index.php'</script>";
                     <div class="single-fun">
                         <i class="icofont-simple-smile"></i>
                         <div class="content">
-                            <span class="counter">4379</span>
+                            <span class="counter"><?php echo $totClient;?></span>
                             <p>Happy Patients</p>
                         </div>
                     </div>
@@ -509,7 +517,7 @@ echo "<script>window.location.href ='index.php'</script>";
                     <div class="single-fun">
                         <i class="icofont icofont-table"></i>
                         <div class="content">
-                            <span class="counter">32</span>
+                            <span class="counter">12</span>
                             <p>Years of Experience</p>
                         </div>
                     </div>
@@ -853,7 +861,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </li>
                         </ul>
                         <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
+                            <a class="btn" href="#appointmentSection">Book Now</a>
                         </div>
                         <!-- Table Bottom -->
                     </div>
@@ -892,7 +900,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </li>
                         </ul>
                         <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
+                            <a class="btn" href="#appointmentSection">Book Now</a>
                         </div>
                         <!-- Table Bottom -->
                     </div>
@@ -931,7 +939,7 @@ echo "<script>window.location.href ='index.php'</script>";
                             </li>
                         </ul>
                         <div class="table-bottom">
-                            <a class="btn" href="#">Book Now</a>
+                            <a class="btn" href="#appointmentSection">Book Now</a>
                         </div>
                         <!-- Table Bottom -->
                     </div>
