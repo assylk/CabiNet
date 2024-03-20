@@ -12,12 +12,19 @@ How to run the Doctor Appointment Management System Project Using PHP and MySQL
 
 6. Import damsmsdb.sql file(given inside the zip package in the SQL file folder)
 
-7. Run the script http://localhost/doctor/dams
-
+7. Run the script http://localhost/doctor/cabinet
+----------------------
 Doctor Login
 
 Username: anu@gmail.com
 
 Password: Test@123
+----------------------
+Secretaire Login
+
+Username: ba3@gmail.com
+
+Password: 123
+----------------------
 
 Or Register a new user.
